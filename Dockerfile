@@ -11,5 +11,5 @@ COPY server.cfg "/opt/steam/apps/Synergy/synergy/cfg/server.cfg"
 COPY bugfix.sh /opt/steam/bin
 RUN bugfix.sh
 
-ENTRYPOINT [ "/opt/steam/apps/Synergy/srcds_run" "-console", "-game", "synergy", "-port", "27015", "-nocrashdialog", "-nohltv" ]
+ENTRYPOINT [ "/opt/steam/apps/Synergy/srcds_run", "-console", "-game", "synergy", "-port", "27015", "-nocrashdialog", "-nohltv" ]
 CMD [ "+map", "d1_trainstation_01"  ]
